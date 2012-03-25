@@ -1,0 +1,21 @@
+@import blueprint
+
+/* IE (all versions)
+/* Boilerplate makes it easy to target different versions of IE, such as:
+/* html.ie6 { text-align: center; }
+/* html.ie6 body { text-align: left; }
+/* */
+
+// To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
+// @include blueprint-ie
+
+//Recommended Blueprint configuration with scoping and semantic layout:
+body.bp
+  +blueprint-ie(true)
+  // Note: Blueprint centers text to fix IE6 container centering.
+  // This means all your texts will be centered under all version of IE by default.
+  // If your container does not have the .container class, don't forget to restore
+  // the correct behavior to your main container (but not the body tag!)
+  // Example:
+  // .my-container
+  //   text-align: left

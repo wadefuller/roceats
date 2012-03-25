@@ -1,0 +1,32 @@
+// Here is where you can define your constants for your application and to configure the blueprint framework.
+// Feel free to delete these if you want keep the defaults:
+
+$blueprint-grid-columns: 24
+$blueprint-container-size: 950px
+$blueprint-grid-margin: 10px
+
+// Use this to calculate the width based on the total width.
+// Or you can set $blueprint-grid-width to a fixed value and unset $blueprint-container-size -- it will be calculated for you.
+$blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $blueprint-grid-columns - $blueprint-grid-margin
+
+$quarter : floor($blueprint-grid-columns / 4)
+$third   : floor($blueprint-grid-columns / 3)
+$half    : floor($blueprint-grid-columns / 2)
+$full    : $blueprint-grid-columns
+
+@mixin align($lrc) // $lrc = left, right, or center (use `none` for center aligns)
+  float: $lrc
+  margin-left: auto
+  margin-right: auto
+  
+@mixin center
+  margin-left: auto
+
+// COLORS
+$bkgd    : #ececec
+$font    : #3C3D47
+$blue    : #3093d3
+
+// TYPE VARS
+$logo-font : bold 5em/1.1em "Bigfish"
+$head-font : normal normal 300 2em/2.5em Museo
